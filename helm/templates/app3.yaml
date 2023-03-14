@@ -16,7 +16,7 @@ spec:
         image:
           tag: latest
         ingress:
-          host: *
+          host: myhothost.ddns.net
       version: v3
   destination:
     namespace: production
