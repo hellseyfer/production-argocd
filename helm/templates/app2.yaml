@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+king: Application
+metadata:
+  name: app2
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/hellseyfer/devops-paradox
+    targetRevision: HEAD
+    path: helm
+    helm:
+      values: |
+        image:
+          tag: latest
+        ingress:
+          host: *
+      version: v3
+  destination:
+    namespace: production
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
