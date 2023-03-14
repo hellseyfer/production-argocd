@@ -14,7 +14,7 @@ spec:
     helm:
       values: |
         image:
-          tag: latest
+          tag: 0.2
         ingress:
           host: myhothost.ddns.net
       version: v3
