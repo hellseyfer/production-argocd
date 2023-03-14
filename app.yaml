@@ -1,6 +1,6 @@
 # application of application (production)
 apiVersion: argoproj.io/v1alpha1
-king: Application
+kind: Application
 metadata:
   name: app1
   namespace: argocd
@@ -9,6 +9,7 @@ metadata:
 spec:
   project: default
   source:
+    path: helm
     repoURL: https://github.com/hellseyfer/production-argocd
     targetRevision: HEAD
   destination:
