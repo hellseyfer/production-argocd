@@ -16,15 +16,7 @@ spec:
         image:
           tag: 0.2
         ingress:
-          enabled: true
-          path: /app2
-          hosts:
-            - myhothost.ddns.net
-          annotations:
-            kubernetes.io/ingress.class: nginx
-            kubernetes.io/tls-acme: "true"
-            nginx.ingress.kubernetes.io/rewrite-target: /$2
-             
+          host: myhothost2.ddns.net
       version: v3
   destination:
     namespace: production
