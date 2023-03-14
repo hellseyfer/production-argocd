@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/hellseyfer/argocd-example-apps
+    repoURL: https://github.com/hellseyfer/devops-paradox
     targetRevision: HEAD
     path: helm-guestbook
     helm:
